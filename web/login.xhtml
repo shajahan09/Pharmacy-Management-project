@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+            <style>
+               body{
+                    background: url("pic.png") no-repeat; 
+                    background-size: cover;
+/*                    height: 80%;
+                    width: 80%;*/
+                     /*border-radius: 100px;*/
+                   
+                    
+                }
+            </style>
+        </h:head>
+
+        <h:body>
+            <center><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+               
+                    <h:form >
+                         
+            <p:panelGrid columns="2" >
+                
+                <f:facet name="header">Information</f:facet>
+                <h:outputLabel for="email" value="Email"/>
+                <p:inputText value="#{mylogin.email}" styleClass="info" id="email" label="email" placeholder="Enter Email"/>
+                
+                <h:outputLabel for="pass" value="PassWord"/>
+                <p:password id="pass" value="#{mylogin.pass}" label="pass" placeholder="Enter Password"/>
+                <f:facet name="footer">
+                    <p:commandButton  action="#{mylogin.sbm()}" value="LogIn" icon="ui-icon-check"/>
+                   
+                    <p:commandLink value="SignUp" action="#{type.submit}" />
+                </f:facet>
+            </p:panelGrid>
+            </h:form>
+                   
+                </center>
+             
+        </h:body>
+
+    </f:view>
+</html>
+
